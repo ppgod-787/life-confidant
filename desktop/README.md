@@ -8,7 +8,7 @@
 
 ## 直接使用
 
-从 [Releases](https://github.com/ppgod-787/life-confidant/releases/latest) 下载 `人生倾诉器.exe`，双击运行。
+从 [Releases](https://github.com/ppgod-787/life-confidant/releases/latest) 下载 `LifeConfidant-Windows-x64.exe`（下载后可以改名为 `人生倾诉器.exe`），双击运行。
 
 首次启动会：
 
