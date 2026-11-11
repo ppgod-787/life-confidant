@@ -73,6 +73,7 @@
 **[下载 Windows 桌面版](https://github.com/ppgod-787/life-confidant/releases/latest)**（约 0.9 MB，Windows 10 / 11 x64）
 
 - 下载 `LifeConfidant-Windows-x64.exe` 后可以改名为 `人生倾诉器.exe`，双击直接运行，无需安装；界面由系统自带的 Edge WebView2 渲染。
+- 需要 Windows 10 / 11 x64、.NET Framework 4.8（Win10 2019 年更新及以后、Win11 自带）和 WebView2 Runtime。
 - 首次启动会把网页资源解压到 `%LOCALAPPDATA%\LifeConfidant`，记录、录音、AI 配置也保存在这里。
 - 语音听写调用 Edge 的语音服务（需联网），录音和记录本身都在本机。
 - 未做代码签名，SmartScreen 提示时选「更多信息 → 仍要运行」。

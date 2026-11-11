@@ -3,7 +3,7 @@
 把同一套网页应用封装成一个**单文件 EXE**：双击就能用，不需要装 Node.js，也不需要手动开浏览器。
 
 - 产物：`out/人生倾诉器.exe`（约 0.9 MB）
-- 运行环境：Windows 10 / 11 x64，系统自带 **Microsoft Edge WebView2 Runtime**（Win11 自带；Win10 通常随 Edge 安装）
+- 运行环境：Windows 10 / 11 x64，系统自带 **.NET Framework 4.8** 与 **Microsoft Edge WebView2 Runtime**（Win11 自带；Win10 通常随 Edge 安装）
 - 界面用 WebView2 渲染；记录、录音、AI 配置都保存在 `%LOCALAPPDATA%\LifeConfidant`
 
 ## 直接使用
