@@ -1,0 +1,19 @@
+{
+  "name": "人生倾诉器",
+  "short_name": "倾诉器",
+  "description": "记录人生中的重要时刻，在日历里看见时间，让 AI 陪你回头看。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f3ec",
+  "theme_color": "#f7f3ec",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
