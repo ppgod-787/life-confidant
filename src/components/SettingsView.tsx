@@ -131,7 +131,9 @@ export function SettingsView() {
                 setTest({ state: 'idle', message: '' })
               }}
             />
-            <span className="field-hint">一般以 /v1 结尾，程序会自动补上 /chat/completions</span>
+            <span className="field-hint">
+              一般以 /v1 结尾，程序会自动补上 /chat/completions。若出现跨域（CORS）报错，换一个支持浏览器直连的接口，或自建转发代理。
+            </span>
           </div>
 
           <div className="field-row">

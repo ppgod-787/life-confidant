@@ -86,11 +86,18 @@ export const PROVIDER_PRESETS: ProviderPreset[] = [
     hint: 'Kimi 开放平台',
   },
   {
-    id: 'zhipu',
-    name: '智谱 GLM',
-    baseUrl: 'https://open.bigmodel.cn/api/paas/v4',
-    model: 'glm-4-flash',
-    hint: 'GLM 系列，有免费额度',
+    id: 'siliconflow',
+    name: '硅基流动',
+    baseUrl: 'https://api.siliconflow.cn/v1',
+    model: 'Qwen/Qwen2.5-7B-Instruct',
+    hint: '多种开源模型，有免费额度',
+  },
+  {
+    id: 'dashscope',
+    name: '阿里云百炼',
+    baseUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
+    model: 'qwen-plus',
+    hint: '通义千问系列，OpenAI 兼容模式',
   },
   {
     id: 'ollama',

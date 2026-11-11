@@ -97,10 +97,13 @@ npm test          # 运行 17 个单元测试
 | DeepSeek | `https://api.deepseek.com/v1` | `deepseek-chat` |
 | OpenAI | `https://api.openai.com/v1` | `gpt-4o-mini` |
 | Moonshot | `https://api.moonshot.cn/v1` | `moonshot-v1-8k` |
-| 智谱 GLM | `https://open.bigmodel.cn/api/paas/v4` | `glm-4-flash` |
+| 硅基流动 | `https://api.siliconflow.cn/v1` | `Qwen/Qwen2.5-7B-Instruct` |
+| 阿里云百炼 | `https://dashscope.aliyuncs.com/compatible-mode/v1` | `qwen-plus` |
 | 本地 Ollama | `http://localhost:11434/v1` | `qwen2.5:7b` |
 
 > 本地 Ollama 可以完全不联网，也不需要 API Key。
+
+**关于跨域（CORS）：** 这是一个纯前端应用，请求由浏览器直接发往模型服务商。DeepSeek、Moonshot、硅基流动、阿里云百炼、OpenRouter 等已验证允许浏览器跨域调用；部分服务商（如智谱）默认不允许，需要自建一层转发代理，或者直接换用上表中的接口。遇到 `Failed to fetch` / CORS 报错时，先换一个服务商试试。
 
 **AI 会看到什么？** 每次提问时，前端会把最近的记录压缩成文本（日期、心情、标题、摘要、标签）连同统计信息一起发给模型。除此之外不会上传任何东西；没有配置 AI 时，记录功能完全不受影响。
 
