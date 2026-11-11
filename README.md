@@ -101,7 +101,7 @@ npm test          # 运行 17 个单元测试
 | 阿里云百炼 | `https://dashscope.aliyuncs.com/compatible-mode/v1` | `qwen-plus` |
 | 本地 Ollama | `http://localhost:11434/v1` | `qwen2.5:7b` |
 
-> 本地 Ollama 可以完全不联网，也不需要 API Key。
+> 本地 Ollama 可以完全不联网，也不需要 API Key。若从线上页面（GitHub Pages）连接本地 Ollama，需要先让 Ollama 允许这个来源，例如启动前设置 `OLLAMA_ORIGINS=https://ppgod-787.github.io`（或临时设为 `*`）。
 
 **关于跨域（CORS）：** 这是一个纯前端应用，请求由浏览器直接发往模型服务商。DeepSeek、Moonshot、硅基流动、阿里云百炼、OpenRouter 等已验证允许浏览器跨域调用；部分服务商（如智谱）默认不允许，需要自建一层转发代理，或者直接换用上表中的接口。遇到 `Failed to fetch` / CORS 报错时，先换一个服务商试试。
 

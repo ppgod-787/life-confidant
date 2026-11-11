@@ -123,7 +123,8 @@ export function buildBackup(events: LifeEvent[], settings: Settings): BackupFile
     app: 'life-confidant',
     version: 1,
     exportedAt: new Date().toISOString(),
-    events,
+    // 原声存在 IndexedDB 里、不随 JSON 导出，所以备份里不留下悬空的 audioId
+    events: events.map((event) => ({ ...event, audioId: undefined, audioDuration: undefined })),
     settings: { theme: settings.theme, nickname: settings.nickname },
   }
 }

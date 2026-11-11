@@ -50,9 +50,29 @@ describe('数据规范化', () => {
     expect(chat[0].role).toBe('user')
   })
 
-  it('备份不包含 API Key', () => {
-    const backup = buildBackup([], { ...DEFAULT_SETTINGS, apiKey: 'sk-secret' })
-    expect(JSON.stringify(backup)).not.toContain('sk-secret')
+  it('备份不包含 API Key，也不留下悬空的录音 id', () => {
+    const backup = buildBackup(
+      [
+        {
+          id: 'evt_audio',
+          title: '有录音的记录',
+          content: '',
+          date: '2026-11-11',
+          time: '',
+          mood: 3,
+          tags: [],
+          audioId: 'aud_secret',
+          audioDuration: 12,
+          createdAt: 1,
+          updatedAt: 1,
+        },
+      ],
+      { ...DEFAULT_SETTINGS, apiKey: 'sk-secret' },
+    )
+    const serialized = JSON.stringify(backup)
+    expect(serialized).not.toContain('sk-secret')
+    expect(serialized).not.toContain('aud_secret')
+    expect(serialized).not.toContain('audioDuration')
     expect(backup.settings).toEqual({ theme: DEFAULT_SETTINGS.theme, nickname: DEFAULT_SETTINGS.nickname })
   })
 })
