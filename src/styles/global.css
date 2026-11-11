@@ -1227,7 +1227,7 @@ body[data-tab='chat'] .fab {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 208px);
-  min-height: 520px;
+  min-height: 400px;
   overflow: hidden;
 }
 

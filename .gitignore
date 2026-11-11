@@ -9,3 +9,5 @@ functional-results.json
 Thumbs.db
 .vscode/
 .idea/
+desktop/.cache/
+desktop/out/
