@@ -117,7 +117,16 @@ namespace LifeConfidant
             if (LoadLibrary(loaderPath) == IntPtr.Zero)
                 throw new InvalidOperationException("无法加载 WebView2 组件（WebView2Loader.dll）。");
 
-            string browserVersion = CoreWebView2Environment.GetAvailableBrowserVersionString();
+            string browserVersion;
+            try
+            {
+                browserVersion = CoreWebView2Environment.GetAvailableBrowserVersionString();
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException(
+                    "未检测到 Microsoft Edge WebView2 运行时。请先安装后再打开：\nhttps://go.microsoft.com/fwlink/p/?LinkId=2124703", ex);
+            }
             if (string.IsNullOrEmpty(browserVersion))
                 throw new InvalidOperationException(
                     "未检测到 Microsoft Edge WebView2 运行时。请先安装后再打开：\nhttps://go.microsoft.com/fwlink/p/?LinkId=2124703");
@@ -244,7 +253,7 @@ namespace LifeConfidant
             {
                 MessageBox.Show(
                     "无法启动内置浏览器：\n\n" + ex.Message +
-                    "\n\n请确认 Microsoft Edge WebView2 Runtime 已安装。",
+                    "\n\n请确认 Microsoft Edge WebView2 Runtime 已安装：\nhttps://go.microsoft.com/fwlink/p/?LinkId=2124703",
                     "人生倾诉器",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
